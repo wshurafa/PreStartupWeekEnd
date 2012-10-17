@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>fbCover</title>
+        <link rel="stylesheet" href="styles/index.css" type="text/css" />
+        <script type="text/javascript" src="scripts/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+
+    </head>
+    <body>
+        <div id="root">
+            <div id="header">
+                <div id="header_social">
+                    <ul id="social_share">
+                        <li id="fb_share">
+                            <a href="#">Share</a><span id="fb_share_counter_arrow"></span><span id="fb_share_counter">380</span>
+                        </li>
+                        <li id="twitter_share">
+                            <a href="#"></a><span id="twitter_share_counter">9,900</span>
+                        </li>
+                        <li id="gp_plus">
+                            <a href="#"></a><span id="gp_plus_arrow"></span><span id="gp_plus_counter">1.3k</span>
+                        </li>
+                    </ul>
+                    <ul id="follow_us">
+                        <li>
+                            <a href="#" id="twitter_link"></a>
+                        </li>
+                        <li>
+                            <a href="#" id="fb_link"></a>
+                        </li>
+                        <li>
+                            <a href="#" id="rss_link"></a>
+                        </li>
+                    </ul>
+                    <ul id="main_menu">
+                        <li class="right_bordered_menu_item">
+                            <a href="#" >Home</a>
+                        </li>
+                        <li class="right_bordered_menu_item">
+                            <a href="#" >About</a>
+                        </li>
+                        <li>
+                            <a href="#" >Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header_logo">
+                    <h1 id="logo_text">
+						Make Facebook cover picture <span>(Timeline)</span>
+                    </h1>
+                    <div id="logo">
+                        <img src="imgs/logo.png" alt="Cover easier than ever.." />
+                    </div>
+                </div>
+                <div id="header_menu">
+                    <ul id="uploading_menu">
+                        <li>
+                            <a href="0" class="clicked">Upload</a>
+                        </li>
+                        <li>
+                            <a href="1">Customize</a>
+                        </li>
+                        <li>
+                            <a href="2">Save</a>
+                        </li>
+                        <li>
+                            <a href="3">Add to Gallery</a>
+                        </li>
+                        <li>
+                            <a href="4">Rate</a>
+                        </li>
+                        <li >
+                            <a href="5">Communicate</a>
+                        </li>
+                        <li id="uploading_menu_buttons">
+                            <button id="random_button"></button><button id="like_button"></button><button id="gotoapp_button"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div id="content_wrapper">
+                    <h1 id="header_bg"><span>Upload</span> your picture:</h1>
+                    <span id="left_arrow" ></span>
+                    <div id="slider_content">
+                        <div id="slider_screen">
+                            <div id="slider_horizontal_container">
+                                <!--Slider Elements -->
+                                <div id="slider_upload" >
+                                    <div id="slider_upload_left_warpper">
+                                        <h2>Start by uploading picture:</h2>
+                                        <div id="uploading_form">
+                                            <input type="text" id="image_upload_input_text" />
+                                            <input type="button" value="Upload picture" id="image_upload_button" />
+                                        </div>
+                                        <div id="uploading_notes">
+                                            <span>Type:</span> (JPG, JPEG, or PNG) <br />
+                                            <span>Width:</span> 850px or more <br />
+                                            <span>Height:</span>315px or more
+                                        </div>
+                                        <div id="uploading_countries">
+                                            <span id="countries_select">Country Name</span>
+                                        </div>
+                                    </div>
+                                    <button class="blue_buttons" id="next_button">Next..</button>
+                                </div>
+                                <div id="slider_customize">
+                                    <div id="customiztion_form">
+                                        <table>
+                                            <tr>
+                                                <td><label for="customize_form_name">Name:</label></td>
+                                                <td><input type="text" id="customize_form_name" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="customize_form_text">Text:</label></td>
+                                                <td><textarea cols="35" rows="3" id="customize_form_text"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Style:</label></td>
+                                                <td id="customize_form_styles"><span class="selected"></span> <span class="round_border"></span> <span class="tl-br_border"></span> <span class="tr-bl_border"></span> <span class="top_border"></span> <span class="bottom_border"></span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Opacity:</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Color:</label></td>
+                                                <td id="color_picker"><span id="black"></span> <span id="white"></span> <br />
+                                                    <span class="green"></span>
+                                                    <span class="maroon"></span>
+                                                    <span class="olive"></span>
+                                                    <span class="navy"></span>
+                                                    <span class="purple"></span>
+                                                    <span class="yellow"></span>
+                                                    <span class="lime"></span>
+                                                    <span class="aqua"></span>
+                                                    <span class="fuchsia"></span>
+                                                    <span class="red"></span>
+                                                    <span class="blue"></span>
+                                                    <span class="teal"></span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="customization_right_portion">
+                                        <div id="customization_auto_preview">
+                                            <h1>
+                                                <span id="auto_prev_left">Left</span>
+						Auto preview
+                                                <span id="auto_prev_right">Right</span>
+                                            </h1>
+                                            <img src="imgs/preview.jpg" alt="Preview" />
+                                        </div>
+                                        <div id="customization_auto_preview_buttons">
+                                            <button class="blue_buttons float_left">Add to Gallery</button>
+                                            <button class="blue_buttons float_right">"Preview & Download"</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="slider_save">
+                                    <img src="imgs/cover.jpg" alt="Cover" />
+                                    <h2><span>Right click and Save Image As..</span></h2>
+                                </div>
+                                <div id="slider_gallery">
+                                    <div class="asc_desc_buttons">
+                                        <button class="asc_button"></button><button class="desc_button"></button>
+                                    </div>
+                                    <div class="gallery_images_warapper">
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery" />
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery" />
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="slider_gallery">
+                                    <div class="asc_desc_buttons">
+                                        <button class="asc_button"></button><button class="desc_button"></button>
+                                    </div>
+                                    <div class="gallery_images_warapper">
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="slider_gallery">
+                                    <div class="asc_desc_buttons">
+                                        <button class="asc_button"></button><button class="desc_button"></button>
+                                    </div>
+                                    <div class="gallery_images_warapper">
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_1.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="gallery_image">
+                                            <img src="imgs/gallery_2.JPG" alt="Gallery"/>
+                                            <div class="gallery_image_img_options">
+                                                <div class="rating"><span title="1"></span><span title="2"></span><span title="3"></span><span title="4"></span><span title="5"></span></div>
+                                                <div class="gallery_image_buttons"><button class="fb_button"></button><button class="dot_button"></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of slider Elements -->
+                            </div>
+                        </div>
+                    </div>
+                    <span id="right_arrow"></span>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="footer_about">
+                    <p>
+						Free App. helps you to customize your own cover picture on facebook with country flag and special titles and styles.
+                        <a href="#" class="blue_link">More..</a>
+                    </p>
+
+                </div>
+                <div id="footer_statistics">
+                    <h1>Statistics</h1>
+                    <p>
+						Total Users: <span>378,906</span> in <a href="#">Gallery</a> <br />
+						Monthly active users: <span>2,610,400</span> <br />
+						Review Saummary: <span></span> <br />
+						Last User: <a href="#">Amjad Abu Jbara</a> <br />
+                        <a href="#">fbCover</a> is not a Facebook product
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</html>
